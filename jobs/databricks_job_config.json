@@ -1,0 +1,39 @@
+{
+  "job_name": "College_Admission_ETL_Pipeline",
+  "description": "Sample Databricks Job configuration for the College Admission Analytics Pipeline.",
+  "workflow": {
+    "schedule": "Manual / On Demand",
+    "pipeline": [
+      {
+        "task": "Bronze",
+        "notebook": "1_bronze",
+        "output": "college.bronze.bronze_college"
+      },
+      {
+        "task": "Silver",
+        "depends_on": "Bronze",
+        "notebook": "2_silver",
+        "output": "college.silver.silver_college"
+      },
+      {
+        "task": "Gold",
+        "depends_on": "Silver",
+        "notebook": "3_gold",
+        "output_tables": [
+          "gold_overview_college",
+          "gold_private",
+          "gold_admission",
+          "gold_tuition",
+          "gold_faculty",
+          "gold_ratio",
+          "gold_expend"
+        ]
+      }
+    ]
+  },
+  "platform": {
+    "workspace": "Databricks Community Edition",
+    "catalog": "college",
+    "storage_format": "Delta Lake"
+  }
+}

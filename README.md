@@ -155,7 +155,7 @@ docs/medallion_architecture.md
 ### Executive Dashboard
 
 <p align="center">
-<img src="dashboard_screenshots/college_admission_dashboard.png" width="100%">
+<img src="dashboard_screenshots/overview_dashboard.png" width="100%">
 </p>
 
 ---

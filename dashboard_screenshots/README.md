@@ -16,5 +16,5 @@ It provides executive insights into:
 ## Dashboard Preview
 
 <p align="center">
-<img src="overview.png" width="100%">
+<img src="overview_dashboard.png" width="100%">
 </p>
